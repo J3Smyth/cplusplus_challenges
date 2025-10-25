@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jud3/Documents/GitHub/cplusplus_challenges/challenges/1_helloWorld'
+relocations:     []
+...
