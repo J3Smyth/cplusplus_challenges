@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/jud3/Documents/GitHub/cplusplus_challenges/challenges",
-      "program": "/Users/jud3/Documents/GitHub/cplusplus_challenges/challenges/build/Debug/outDebug"
+      "cwd": "/Users/jud3/Documents/GitHub/cplusplus_challenges",
+      "program": "/Users/jud3/Documents/GitHub/cplusplus_challenges/build/Debug/outDebug"
     }
   ]
 }
