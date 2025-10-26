@@ -10,18 +10,29 @@ int ptrIteration();
 int iMaxArrayElement(int *pi, int size);
 int *piReverseArray(int *pi, int size);
 
+//-----ptr logic functions
+void swap(int &i, int &j);
+void swap(int *i, int *j);
+
 int main()
 {
     ptrPrint();
     ptrIteration();
-    //----------------------------------
+    // //----------------------------------
     int const size = 7;
     int *pi = new int[size]{30, 40, 50, 60, 70, 80, 90};
-    cout << iMaxArrayElement(pi, size) << endl;
-    //----------------------------------
     cout << "Normal Array: " << printIntArrayStr(pi, size) << endl;
+    cout << "Maximum Element in Array: " << iMaxArrayElement(pi, size) << endl;
+    // //----------------------------------
     int *revPi = piReverseArray(pi, size);
     cout << "Reversed Array: " << printIntArrayStr(revPi, size) << endl;
+    //-----------ptr logic functions
+    int i = 5, j = 10;
+    cout << "Original: " << i << " " << j << "\n";
+    swap(i, j);
+    cout << "*i, *j ptrs: " << i << " " << j << "\n";
+    swap(&i, &j);
+    cout << "&i, &j ptrs: " << i << " " << j << "\n";
 }
 
 int ptrPrint()
@@ -87,9 +98,9 @@ int *piReverseArray(int *pi, int size)
 {
     int firstPos = 0;
     int lastPos = size - 1;
-    for (int i = 0; i < (size / 2); i++) 
+    for (int i = 0; i < (size / 2); i++)
     // going up to half size of array bc 2 position variables
-    //at opposite ends coming to halfway point of word, meaning full word has been reversed.
+    // at opposite ends coming to halfway point of word, meaning full word has been reversed.
     {
         int tempPos = pi[firstPos];
         pi[firstPos] = pi[lastPos];
@@ -98,4 +109,19 @@ int *piReverseArray(int *pi, int size)
         lastPos--;
     }
     return pi;
+}
+
+void swap(int &i, int &j)
+//this function is easier as it simply calls by reference with '&'
+{
+    int temp = i;
+    i = j;
+    j = temp;
+}
+
+void swap(int *i, int *j)
+{
+    int temp = *i;
+    *i = *j;
+    *j = temp;
 }
