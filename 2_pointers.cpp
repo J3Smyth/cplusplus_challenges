@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iterator>
+#include <sstream> //for the stringstream concatinated output
 using namespace std;
 
 // POINTERS point to a variable's memory address,
@@ -35,12 +36,29 @@ int ptrPrint()
     return 0;
 }
 
+string printIntArrayStr(int array[], int SIZE){
+    stringstream arrayStrs;
+    arrayStrs << "[";
+    for(int i = 0; i<SIZE; i++){
+        arrayStrs << array[i];
+        if(i<SIZE-1){
+            arrayStrs << ", ";
+        }
+    }
+    arrayStrs << "]";
+    string finalArrayStr = arrayStrs.str();
+    return finalArrayStr;
+}
+
 int ptrIteration()
 {
     const int SIZE = 6;
     int idList[SIZE] = {10, 12, 14, 16, 18, 20};
-    cout << "Pointer Iteration\n--------------------\n";
-    for (int *i = idList; *i < SIZE; i++)
+    int *end = idList + SIZE;
+
+    cout << "Pointer Iteration\n--------------------\n"
+    << "Array: " << printIntArrayStr(idList,SIZE) << endl;
+    for (int *i = idList; i < end; i++)
     {
         cout << "__ " << *i << " __" << endl;
     }
