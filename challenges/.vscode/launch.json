@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/jud3/Documents/GitHub/cplusplus_challenges/challenges",
+      "program": "/Users/jud3/Documents/GitHub/cplusplus_challenges/challenges/build/Debug/outDebug"
+    }
+  ]
+}
