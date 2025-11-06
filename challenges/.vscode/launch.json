@@ -6,8 +6,9 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/jud3/Documents/GitHub/cplusplus_challenges/challenges",
-      "program": "/Users/jud3/Documents/GitHub/cplusplus_challenges/challenges/build/Debug/outDebug"
+      "cwd": "${fileDirname}",
+      "program": "${fileDirname}/${fileBasenameNoExtension}", // <-- THIS IS THE MAIN FIX
+      "console": "integratedTerminal"
     }
   ]
 }

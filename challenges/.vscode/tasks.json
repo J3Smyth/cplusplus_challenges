@@ -13,6 +13,8 @@
 				"${fileDirname}/${fileBasenameNoExtension}",
 				"-framework",
                 "CoreGraphics",
+				"-framework",
+                "CoreFoundation",
                 "-mmacosx-version-min=14.0" // adding this bc macOS 15+ doesn't allow Core Graphics
 			],
 			"options": {

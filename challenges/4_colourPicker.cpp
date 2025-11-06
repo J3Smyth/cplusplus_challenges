@@ -7,6 +7,7 @@ int main()
     int exit = 1; // program is on by default
     while (true)
     {
+        cout << "0 to Exit, 1 to Get Colour!" << endl;
         cin >> exit; // get user choice, to prevent CPU overload
         if(exit == 0){ // if program is turned off
             return 0; // end program
