@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector> //included in C++ Standard Template Library
-using namespace std;
+using std::cout;
+using std::cin;
+using std::vector;
 
 //Operations w/ Vectors---------------
 // iterator begin();
