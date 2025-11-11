@@ -3,6 +3,7 @@
 using std::cout;
 using std::cin;
 using std::vector;
+using std::string;
 
 //Operations w/ Vectors---------------
 // iterator begin();
